@@ -1,0 +1,203 @@
+/* Default (Killer) Theme Styles */
+body h1,
+.team-selection label:hover,
+.team-selection input[type="radio"]:checked+label,
+.mode-selection label:hover,
+.mode-selection input[type="radio"]:checked+label,
+#select-character-btn,
+.character-btn {
+  background-color: #5a0a0a;
+}
+
+#select-character-btn:hover,
+.character-btn:hover {
+  background-color: #8c0c0c;
+}
+
+/* Survivor Theme Styles */
+body.survivor-theme h1,
+body.survivor-theme .team-selection label:hover,
+body.survivor-theme .team-selection input[type="radio"]:checked+label,
+body.survivor-theme .mode-selection label:hover,
+body.survivor-theme .mode-selection input[type="radio"]:checked+label,
+body.survivor-theme #select-character-btn,
+body.survivor-theme .character-btn {
+  background-color: #0d47a1;
+}
+
+body.survivor-theme #select-character-btn:hover,
+body.survivor-theme .character-btn:hover {
+  background-color: #1c64c7;
+}
+
+/* Shared Styles */
+.team-selection input[type="radio"],
+.mode-selection input[type="radio"] {
+  display: none;
+}
+
+.team-selection label,
+.mode-selection label {
+  padding: 6px 12px;
+  background-color: transparent; /* Dark red color */
+  border-radius: 4px;
+  border: 1px solid #4a4a4a;
+}
+
+.character-btn,
+.team-selection label,
+.mode-selection label,
+#select-character-btn {
+  cursor: pointer;
+}
+
+body,
+.character-btn,
+.team-selection label,
+.mode-selection label,
+#select-character-btn {
+  color: #fff;
+}
+
+h1,
+.team-selection,
+.mode-selection,
+.character-selection,
+.character-container,
+.character-list-container,
+.character-list,
+.character-btn,
+.excluded-list-container,
+.excluded-list-title,
+#select-character-btn {
+  text-align: center;
+  font-weight: bold;
+}
+
+body,
+h1 {
+  margin: 0;
+}
+
+html,
+body,
+.character-list-container,
+.excluded-list-container {
+  background-color: #0d0d0d;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+h1 {
+  padding: 20px;
+}
+
+#killer-radio + label {
+  padding: 6px 25px;
+}
+
+.character-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.character-image {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-top: 20px;
+}
+
+#selected-character-name {
+  height: 1px;
+}
+
+#select-character-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.character-list-container {
+  overflow-y: auto;
+  margin-bottom: 2px;
+}
+
+.character-list-title {
+  margin-bottom: 0px;
+}
+
+.character-list,
+.excluded-list {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.character-list .character-btn {
+  margin-top: 0px;
+  margin: 5px;
+}
+
+.character-btn {
+  padding: 6px 24px;
+  border: none;
+  border-radius: 4px;
+}
+
+.excluded-list-container {
+  display: none;
+}
+
+.excluded-list-container.show {
+  display: block;
+}
+
+.excluded-list-title {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.excluded-list .character-btn {
+  margin: 5px;
+}
+
+.centered-confirm-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-list,
+.excluded-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.character-list .character-btn,
+.excluded-list .character-btn {
+  flex-basis: 20%; /* Each character takes 25% of the container width */
+  margin: 5px;
+  padding: 25px 5px;
+}
+
+h1,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DBD Character Selector</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+         .info-circle {
+         font-size: 20px;
+         margin-right: 5px;
+         color: #007bff;
+         cursor: pointer;
+         }
+      </style>
+   </head>
+   <body>
+      <h1 class="page-title">ENTER THE FOG...</h1>
+      <div class="team-selection">
+         <h3 class="team-selection-title">TEAM</h3>
+         <div class="team-buttons" id="team-buttons">
+            <input type="radio" id="survivor-radio" name="team" value="survivor">
+            <label for="survivor-radio">SURVIVOR</label>
+            <input type="radio" id="killer-radio" name="team" value="killer" checked>
+            <label for="killer-radio">KILLER</label>
+         </div>
+      </div>
+      <div class="mode-selection">
+         <h3 class="mode-selection-title">MODE</h3>
+         <div class="mode-buttons">
+            <input type="radio" id="normal-radio" name="mode" value="normal">
+            <label for="normal-radio">RANDOM</label>
+            <input type="radio" id="cycle-radio" name="mode" value="cycle" checked>
+            <label for="cycle-radio">HARDCORE</label>
+            <a tabindex="0" role="button" class="btn btn-link text-dark btn-sm p-0 info-circle" id="mode-info" data-bs-toggle="popover" data-bs-trigger="focus" title="" data-bs-content="In Random mode, characters will be selected randomly. In Hardcore mode, a character cannot be selected again until all characters have been chosen. Banned characters will not be selected for either mode."><i class="fas fa-info-circle"></i></a>
+         </div>
+      </div>
+      <div class="character-display">
+         <div class="character-container">
+            <img class="character-image" src="images/default.png" alt="Character Image">
+            <p id="selected-character-name"></p>
+         </div>
+      </div>
+      <div class="character-selection">
+         <button id="select-character-btn">SELECT</button>
+      </div>
+      <div class="character-list-container">
+         <h3 class="character-list-title">CHARACTERS</h3>
+         <div class="character-list">
+         </div>
+      </div>
+      <div class="excluded-list-container">
+         <h3 class="excluded-list-title">BANNED</h3>
+         <div class="excluded-list">
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="event-listeners.js" type="module"></script>
+      <script>
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+   return new bootstrap.Popover(popoverTriggerEl)
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+   const survivorLabel = document.querySelector('label[for="survivor-radio"]');
+   const killerLabel = document.querySelector('label[for="killer-radio"]');
+   const normalLabel = document.querySelector('label[for="normal-radio"]');
+   const cycleLabel = document.querySelector('label[for="cycle-radio"]');
+
+   const teamLabelsOffset = survivorLabel.offsetLeft + killerLabel.offsetLeft;
+   const modeLabelsOffset = normalLabel.offsetLeft + cycleLabel.offsetLeft;
+
+   const modeButtons = document.querySelector('.mode-buttons');
+   const marginOffset = teamLabelsOffset - modeLabelsOffset;
+
+   modeButtons.style.marginLeft = marginOffset + 'px';
+});
+      </script>
+   </body>
+</html>

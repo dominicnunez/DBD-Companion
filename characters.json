@@ -1,0 +1,30 @@
+{
+  "killers": {
+    "01": "Trapper", "02": "Wraith", "03": "Hillbilly", "04": "Nurse",
+    "05": "Huntress", "06": "Shape", "07": "Hag", "08": "Doctor",
+    "09": "Cannibal", "10": "Nightmare", "11": "Pig", "12": "Clown",
+    "13": "Spirit", "14": "Legion", "15": "Plague", "16": "Ghost Face",
+    "18": "Oni", "19": "Deathslinger", "20": "Executioner", "21": "Blight",
+    "22": "Twins", "23": "Trickster", "24": "Nemesis", "25": "Cenobite",
+    "26": "Artist", "27": "Onryō", "28": "Dredge", "29": "Mastermind",
+    "30": "Knight", "31": "Skull Merchant"
+  },
+
+  "exclusive_killers": { "17": "Demogorgan"},
+
+  "survivors": {
+    "01": "Dwight Fairfield", "02": "Meg Thomas", "03": "Claudette Morel", "04": "Jake Park",
+    "05": "Nea Karlsson", "06": "Bill Overbeck", "07": "David King", "08": "Laurie Strode",
+    "09": "Ace Visconti", "10": "Feng Min", "11": "Quentin Smith", "12": "David Tapp",
+    "13": "Kate Denson", "14": "Adam Francis", "15": "Jeff Johansen", "16": "Jane Romero",
+    "17": "Ash Williams", "20": "Yui Kimura", "21": "Zarina Kassir", "22": "Cheryl Mason",
+    "23": "Felix Richter", "24": "Élodie Rakoto", "25": "Yun-Jin Lee", "26": "Jill Valentine",
+    "27": "Leon Kennedy", "28": "Mikaela Reid", "29": "Jonah Vasquez", "30": "Yoichi Asakawa",
+    "31": "Haddie Kaur", "32": "Ada Wong", "33": "Rebecca Chambers", "34": "Vittorio Toscano",
+    "35": "Thalita Lyra", "36": "Renato Lyra"
+  },
+
+  "exclusive_survivors": {
+    "18": "Nancy Wheeler", "19": "Steve Harrington"
+  }
+}
